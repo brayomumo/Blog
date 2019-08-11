@@ -1,6 +1,6 @@
 import os
 
-class config:
+class Config:
     #keys required by flask extensions
     SECRET_KEY = os.environ.get("SECRET_KEY")
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
