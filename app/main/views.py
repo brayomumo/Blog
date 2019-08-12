@@ -2,13 +2,15 @@ from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required,current_user
 from . import main
 from .. import db,photos
+from ..request import get_quote
 from ..models import User,Role,Blog,Comment
 from .forms import UpdateProfile,BlogForm,CommentForm
 
 # View function for the landing page
 @main.route('/')
 def index():
-
+    name  = "Quote"
+    quote = get_quote()
     Gaming = Blog.query.filter_by(category="Gaming").all()
     Career = Blog.query.filter_by(category="Career").all()
     technology = Blog.query.filter_by(category="Finance").all()
@@ -17,7 +19,7 @@ def index():
     Fitness = Blog.query.filter_by(category="Fitness").all()
 
     blogs = Blog.query.filter().all()
-    return render_template('index.html',Gaming=Gaming,Career=Career,technology=technology,Gossip=Gossip,Sports=Sports,Fitness=Fitness,blogs=blogs)
+    return render_template('index.html',Gaming=Gaming,Career=Career,technology=technology,Gossip=Gossip,Sports=Sports,Fitness=Fitness,blogs=blogs, name = name,quote = quote)
 
 # View function for profile
 @main.route('/user/<uname>')
