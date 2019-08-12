@@ -11,13 +11,13 @@ def index():
 
     Gaming = Blog.query.filter_by(category="Gaming").all()
     Career = Blog.query.filter_by(category="Career").all()
-    Finance = Blog.query.filter_by(category="Finance").all()
+    technology = Blog.query.filter_by(category="Finance").all()
     Gossip = Blog.query.filter_by(category="Gossip").all()
     Sports = Blog.query.filter_by(category="Sports").all()
     Fitness = Blog.query.filter_by(category="Fitness").all()
 
     blogs = Blog.query.filter().all()
-    return render_template('index.html',Gaming=Gaming,Career=Career,Finance=Finance,Gossip=Gossip,Sports=Sports,Fitness=Fitness,blogs=blogs)
+    return render_template('index.html',Gaming=Gaming,Career=Career,technology=technology,Gossip=Gossip,Sports=Sports,Fitness=Fitness,blogs=blogs)
 
 # View function for profile
 @main.route('/user/<uname>')
