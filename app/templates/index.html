@@ -38,56 +38,68 @@
     </header>
 </section>
 
-<!-- Blogs section -->
-<div class="row" id="gaming">
-    <div class="category col-md-12">
-        <h4 id="gaming" class="blog_title">Gaming</h4>
-        <ul>
-            {{macro.displayBlogs(Gaming)}}
-        </ul>
+<div class="row">
+    <div class="col-md-8">
+        <!-- Blogs section -->
+        <div class="row" id="gaming">
+            <div class="category col-md-12">
+                <h4 id="gaming" class="blog_title">Gaming</h4>
+                <ul>
+                    {{macro.displayBlogs(Gaming)}}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row" id="career">
+            <div class="category col-md-12">
+                <h4 id="career" class="blog_title">Career</h4>
+                <ul>
+                    {{macro.displayBlogs(Career)}}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row" id="technology">
+            <div class="category col-md-12">
+                <h4 id="technology" class="blog_title">Technology</h4>
+                <ul>
+                    {{macro.displayBlogs(Finance)}}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row" id="gossip">
+            <div class="category col-md-12">
+                <h4 id="gossip" class="blog_title">Gossip</h4>
+                <ul>
+                    {{macro.displayBlogs(Gossip)}}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row" id="fitness">
+            <div class="category col-md-12">
+                <h4 id="finance" class="blog_title">Finance</h4>
+                <ul>
+                    {{macro.displayBlogs(Finance)}}
+                </ul>
+            </div>
+        </div>
+
     </div>
-</div>
+    <div class="col-md-4">
+        <!-- Quotes section -->
+        <div class="jumbotron text-center">
+            <p>{{quote.quote}}</p>
+            <p>{{quote.author}}</p>
+        </div>
+    </div>
 </div>
 
-<div class="row" id="career">
-    <div class="category col-md-12">
-        <h4 id="career" class="blog_title">Career</h4>
-        <ul>
-            {{macro.displayBlogs(Career)}}
-        </ul>
-    </div>
-</div>
-</div>
-
-<div class="row" id="technology">
-    <div class="category col-md-12">
-        <h4 id="technology" class="blog_title">Technology</h4>
-        <ul>
-            {{macro.displayBlogs(Finance)}}
-        </ul>
-    </div>
-</div>
-</div>
-
-<div class="row" id="gossip">
-    <div class="category col-md-12">
-        <h4 id="gossip" class="blog_title">Gossip</h4>
-        <ul>
-            {{macro.displayBlogs(Gossip)}}
-        </ul>
-    </div>
-</div>
-</div>
-
-<div class="row" id="fitness">
-    <div class="category col-md-12">
-        <h4 id="finance" class="blog_title">Finance</h4>
-        <ul>
-            {{macro.displayBlogs(Finance)}}
-        </ul>
-    </div>
-</div>
-</div>
 {% endblock%}
 
 </html>
